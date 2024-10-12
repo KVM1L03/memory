@@ -1,0 +1,197 @@
+$primary-color: #001eff; // Primary color
+$secondary-color: #8900ff; // Secondary color
+$accent-color: #ff008d; // Accent color
+$background-color: #1c1c1c; // Background color
+$text-color: #ffffff; // Text color
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+.game-board {
+  text-align: center;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-button {
+  background: linear-gradient(135deg, $primary-color, $secondary-color); // Gradient background
+  color: $text-color;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50px; // Fully rounded corners
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: linear-gradient(135deg, darken($primary-color, 10%), darken($secondary-color, 10%)); // Darkened gradient on hover
+    transform: scale(1.05); 
+  }
+
+  &:active {
+    transform: scale(0.95); 
+  }
+}
+
+.tiles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  max-width: 440px; 
+  margin: 0 auto; 
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 6px;
+  }
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, $primary-color, $secondary-color); 
+  color: $text-color;
+  font-size: 24px;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &.revealed {
+    background: linear-gradient(135deg, $secondary-color, $accent-color);
+  }
+
+  &.matched {
+    background: $accent-color;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, darken($primary-color, 10%), darken($secondary-color, 5%)); 
+  }
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 440px; 
+  margin-bottom: 20px;
+}
+
+.popout {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 20, 20);
+  padding: 20px;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 10px; 
+}
+
+.popout h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.popout p {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.popout button {
+  background: linear-gradient(135deg, $primary-color, $secondary-color); 
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px; // Fully rounded corners
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+
+  &:hover {
+    background: linear-gradient(135deg, darken($primary-color, 10%), darken($secondary-color, 10%)); // Darkened gradient on hover
+    transform: scale(1.05); 
+  }
+
+  &:active {
+    transform: scale(0.95); 
+  }
+}
+
+.difficulty-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 20px;
+
+  label {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: $text-color;
+
+    input[type="radio"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $primary-color;
+      border-radius: 50%;
+      margin-right: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:checked {
+        background: $accent-color;
+      }
+
+      &:hover {
+        background: $accent-color;
+      }
+    }
+  }
+}

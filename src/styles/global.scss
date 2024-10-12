@@ -1,0 +1,16 @@
+$primary-color: #001eff; // Primary color
+$secondary-color: #8900ff; // Secondary color
+$accent-color: #ff008d; // Accent color
+$background-color: #1c1c1c; // Background color
+$text-color: #ffffff; // Text color
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+h1 {
+  color: $primary-color;
+}

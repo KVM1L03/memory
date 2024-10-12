@@ -1,0 +1,48 @@
+$primary-color: #001eff; // Primary color
+$secondary-color: #8900ff; // Secondary color
+$background-color: #1c1c1c; // Background color
+$text-color: #ffffff; // Text color
+
+header {
+  background-color: $background-color;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  nav {
+    display: flex;
+    justify-content: flex-start; 
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+
+      li {
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 10px 20px;
+          border-radius: 50px;
+          transition: background 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            background: linear-gradient(135deg, darken($primary-color, 10%), darken($secondary-color, 10%));
+            transform: scale(1.05);
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}
