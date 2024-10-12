@@ -18,7 +18,7 @@ export const imageData: Data[] = [
     {
         id: 3,
         img_title: 'Robot Arm',
-        image: "https://img.icons8.com/external-yogi-aprelliyanto-glyph-yogi-aprelliyanto/32/FFFFFF/external-robot-arm-manufacturing-yogi-aprelliyanto-glyph-yogi-aprelliyanto.png" 
+        image: "https://img.icons8.com/external-yogi-aprelliyanto-glyph-yogi-aprelliyanto/50/FFFFFF/external-robot-arm-manufacturing-yogi-aprelliyanto-glyph-yogi-aprelliyanto.png" 
     },
     {
         id: 4,
@@ -40,9 +40,26 @@ export const imageData: Data[] = [
         img_title: "Bug",
         image: "https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/50/FFFFFF/external-malware-coding-and-programming-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png" 
     },
+    {
+        id: 8,
+        img_title: "Rocket",
+        image: "https://img.icons8.com/ios-filled/50/FFFFFF/rocket.png" 
+    },
+    {
+        id: 9,
+        img_title: "Satellite",
+        image: "https://img.icons8.com/external-smashingstocks-fill-lineal-smashing-stocks/50/FFFFFF/external-satelite-networking-smashingstocks-fill-lineal-smashing-stocks.png"
+    },
+    {
+        id: 10,
+        img_title: "Alien",
+        image: "https://img.icons8.com/glyph-neue/64/FFFFFF/grey.png"
+    }
+
     
 ];
 
+// Function to preload images
 export const preloadImages = () => {
     imageData.forEach((data) => {
         const img = new Image();

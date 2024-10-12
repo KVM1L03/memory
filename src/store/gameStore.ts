@@ -1,27 +1,26 @@
 import { create } from 'zustand';
 import { imageData } from '../assets/data';
 
-interface Tile { // Types for the tiles
+// Types for the tiles
+interface Tile { 
     id: number;
     value: number;
     matched: boolean;
     image: string; 
-}
+} 
 
 type Difficulty = 'easy' | 'normal' | 'hard'; // Types for the difficulty
 
-interface Game { // Types for the game history
+// Types for the game history
+interface Game { 
     attempts: number;
     time: number;
     difficulty: Difficulty;
     date: Date;
 }
 
-
-
-
-
-interface GameState { // Types for the game state
+// Types for the game state
+interface GameState { 
     tiles: Tile[];
     revealedTiles: number[];
     attempts: number;
