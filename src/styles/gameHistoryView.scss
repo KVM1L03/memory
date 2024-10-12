@@ -17,7 +17,8 @@ $table-row-hover-color: #444444; // Table row hover background color
   h2 {
     text-align: center;
     color: $primary-color;
-    margin-bottom: 20px;
+    margin-bottom: 30px; 
+    margin-top: 0; 
   }
 
   .game-history-table-container {
@@ -59,6 +60,7 @@ $table-row-hover-color: #444444; // Table row hover background color
 
     h2 {
       font-size: 20px;
+      margin-bottom: 10px; 
     }
 
     table {
@@ -75,6 +77,7 @@ $table-row-hover-color: #444444; // Table row hover background color
 
     h2 {
       font-size: 18px;
+      margin-bottom: 10px; 
     }
 
     table {
