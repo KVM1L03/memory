@@ -20,6 +20,11 @@ $table-row-hover-color: #444444; // Table row hover background color
     margin-bottom: 20px;
   }
 
+  .game-history-table-container {
+    max-height: 400px; 
+    overflow-y: auto; 
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -65,7 +70,7 @@ $table-row-hover-color: #444444; // Table row hover background color
   }
 
   @media (max-width: 480px) {
-    max-width: 100%; // Full width for small screens
+    max-width: 100%; 
     padding: 10px;
 
     h2 {
