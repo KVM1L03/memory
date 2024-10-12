@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useGameStore } from '../store/gameStore';
-import Tile from './Tile';
+import Tile from '../components/Tile';
 import '../styles/gameView.scss';
 
 const GameView: React.FC = () => {

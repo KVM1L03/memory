@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import GameView from './components/GameView';
-import GameHistoryView from './components/GameHistoryView';
+import GameView from './screens/GameScreen';
+import GameHistoryView from './screens/GameHistoryScreen';
 import Header from './components/Header';
 
 const App: React.FC = () => {
