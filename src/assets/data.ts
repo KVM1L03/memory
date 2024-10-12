@@ -42,3 +42,10 @@ export const imageData: Data[] = [
     },
     
 ];
+
+export const preloadImages = () => {
+    imageData.forEach((data) => {
+        const img = new Image();
+        img.src = data.image;
+    });
+};
